@@ -1,7 +1,7 @@
 ---
 name: prevent-background-cleanup-eperm-crash
 title: 防止后台清理权限错误导致 pi 退出
-status: confirmed
+status: planned
 created: 2026-08-31
 ---
 
