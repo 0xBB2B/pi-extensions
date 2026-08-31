@@ -8,8 +8,8 @@ name: prevent-background-cleanup-eperm-crash
 - refs: [R-1, AC-1]
 - parallel: false
 - verify: pnpm --dir /Users/bb/Projects/pi-extensions --filter @richardgill/pi-background-bash exec vitest --run tests/background-bash.integration.test.ts && pnpm --dir /Users/bb/Projects/pi-extensions --filter @richardgill/pi-background-bash tsc
-- status: doing
+- status: done
 - step: impl
 - agent: eperm-green-impl
-- commit:
+- commit: c461632
 - note:
