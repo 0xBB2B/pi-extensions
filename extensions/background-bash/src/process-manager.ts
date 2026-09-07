@@ -90,6 +90,8 @@ const killProcessGroup = (pgid: number): void => {
   }
 };
 
+// Exit listeners run outside the command's promise error handling, so throwing here can crash Pi.
+// Cleanup is best-effort on EPERM; this does not guarantee remaining descendants were terminated.
 const cleanupProcessGroupAfterExit = (pgid: number): void => {
   try {
     killProcessGroup(pgid);
